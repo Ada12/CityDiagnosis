@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SQL Server - CityDiagnosis@139.196.11.153" uuid="13cf3325-562f-48ac-a56b-f19f646d9ea7">
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <schema-pattern>CityDiagnosis.*</schema-pattern>
+      <default-schemas>CityDiagnosis.*</default-schemas>
+    </data-source>
+  </component>
+</project>
