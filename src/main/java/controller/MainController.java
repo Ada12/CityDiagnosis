@@ -67,7 +67,7 @@ public class MainController {
         returnInfo.put("y2013", indexdetailEntity.getY2013());
         result.put("Code", 0);
         result.put("Msg", "Success");
-        result.put("result", returnInfo);
+        result.put("results", returnInfo);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Access-Control-Allow-Credentials", "true");
         headers.add("Access-Control-Allow-Origin", "http://localhost:8080");
