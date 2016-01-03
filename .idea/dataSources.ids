@@ -304,16 +304,16 @@
       <column name="TABLE_SCHEMA" sqlType="nvarchar" precision="128" scale="0" nullable="true" jdbcType="12"/>
       <column name="TABLE_NAME" sqlType="sysname" precision="128" scale="0" nullable="false" jdbcType="12"/>
     </table>
-    <table name="city" schema="dbo" catalog="CityDiagnosis" type="TABLE">
-      <column name="city_id" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
-      <column name="city_name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PK_city" columns="city_id"/>
-    </table>
-    <table name="index" schema="dbo" catalog="CityDiagnosis" type="TABLE">
+    <table name="Indicator" schema="dbo" catalog="CityDiagnosis" type="TABLE">
       <column name="index_id" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="index_name" sqlType="varchar" precision="250" scale="0" nullable="true" jdbcType="12"/>
       <column name="unit" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PK_index_temp" columns="index_id"/>
+    </table>
+    <table name="city" schema="dbo" catalog="CityDiagnosis" type="TABLE">
+      <column name="city_id" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="city_name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PK_city" columns="city_id"/>
     </table>
     <table name="indexdetail" schema="dbo" catalog="CityDiagnosis" type="TABLE">
       <column name="No" sqlType="int identity" precision="10" scale="0" nullable="false" jdbcType="4"/>

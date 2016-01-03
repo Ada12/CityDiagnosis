@@ -19,4 +19,9 @@ public class IndexDetailService {
     public void createIndexDetail(IndexdetailEntity indexDetailInfo){
         indexDetailDao.createIndexDetail(indexDetailInfo);
     }
+
+    public IndexdetailEntity getIndexDetail(String cityId, String indexId){
+        return indexDetailDao.getIndexDetail(cityId, indexId);
+    }
+
 }
