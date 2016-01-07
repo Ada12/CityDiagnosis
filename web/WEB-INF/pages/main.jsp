@@ -17,17 +17,63 @@
         function getResult(){
             var url = window.location.href;
             var content = url.split('/');
-            var urlSend = "http://localhost:8080/json/" + content[3] + "/" + content[4];
+            var urlSend = "/json/" + content[3] + "/" + content[4];
             $.get(urlSend, {Action:"get",Name:"yc"}, function (response, textStatus){
-                var y1 = response.results["y2009"] == null? null : parseFloat(response.results["y2009"]);
-                var y2 = response.results["y2010"] == null? null : parseFloat(response.results["y2010"]);
-                var y3 = response.results["y2011"] == null? null : parseFloat(response.results["y2011"]);
-                var y4 = response.results["y2012"] == null? null : parseFloat(response.results["y2012"]);
-                var y5 = response.results["y2013"] == null? null : parseFloat(response.results["y2013"]);
+//                var y1 = response.results["y1996"] == null? null : parseFloat(response.results["y1996"]);
+//                var y2 = response.results["y1997"] == null? null : parseFloat(response.results["y1997"]);
+//                var y3 = response.results["y1998"] == null? null : parseFloat(response.results["y1998"]);
+//                var y4 = response.results["y1999"] == null? null : parseFloat(response.results["y1999"]);
+//                var y5 = response.results["y2000"] == null? null : parseFloat(response.results["y2000"]);
+//                var y6 = response.results["y2001"] == null? null : parseFloat(response.results["y2001"]);
+//                var y7 = response.results["y2002"] == null? null : parseFloat(response.results["y2002"]);
+//                var y8 = response.results["y2003"] == null? null : parseFloat(response.results["y2003"]);
+//                var y9 = response.results["y2004"] == null? null : parseFloat(response.results["y2004"]);
+//                var y10 = response.results["y2005"] == null? null : parseFloat(response.results["y2005"]);
+//                var y11 = response.results["y2006"] == null? null : parseFloat(response.results["y2006"]);
+//                var y12 = response.results["y2007"] == null? null : parseFloat(response.results["y2007"]);
+//                var y13 = response.results["y2008"] == null? null : parseFloat(response.results["y2008"]);
+//                var y14 = response.results["y2009"] == null? null : parseFloat(response.results["y2009"]);
+//                var y15 = response.results["y2010"] == null? null : parseFloat(response.results["y2010"]);
+//                var y16 = response.results["y2011"] == null? null : parseFloat(response.results["y2011"]);
+//                var y17 = response.results["y2012"] == null? null : parseFloat(response.results["y2012"]);
+//                var y18 = response.results["y2013"] == null? null : parseFloat(response.results["y2013"]);
+
+
+                var y1 = response.results["y1996"] == ""? null : parseFloat(response.results["y1996"]);
+                var y2 = response.results["y1997"] == ""? null : parseFloat(response.results["y1997"]);
+                var y3 = response.results["y1998"] == ""? null : parseFloat(response.results["y1998"]);
+                var y4 = response.results["y1999"] == ""? null : parseFloat(response.results["y1999"]);
+                var y5 = response.results["y2000"] == ""? null : parseFloat(response.results["y2000"]);
+                var y6 = response.results["y2001"] == ""? null : parseFloat(response.results["y2001"]);
+                var y7 = response.results["y2002"] == ""? null : parseFloat(response.results["y2002"]);
+                var y8 = response.results["y2003"] == ""? null : parseFloat(response.results["y2003"]);
+                var y9 = response.results["y2004"] == ""? null : parseFloat(response.results["y2004"]);
+                var y10 = response.results["y2005"] == ""? null : parseFloat(response.results["y2005"]);
+                var y11 = response.results["y2006"] == ""? null : parseFloat(response.results["y2006"]);
+                var y12 = response.results["y2007"] == ""? null : parseFloat(response.results["y2007"]);
+                var y13 = response.results["y2008"] == ""? null : parseFloat(response.results["y2008"]);
+                var y14 = response.results["y2009"] == ""? null : parseFloat(response.results["y2009"]);
+                var y15 = response.results["y2010"] == ""? null : parseFloat(response.results["y2010"]);
+                var y16 = response.results["y2011"] == ""? null : parseFloat(response.results["y2011"]);
+                var y17 = response.results["y2012"] == ""? null : parseFloat(response.results["y2012"]);
+                var y18 = response.results["y2013"] == ""? null : parseFloat(response.results["y2013"]);
+
+
+
+
                 $('#container').highcharts({
                             colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
                                 "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
                             chart: {
+                                type: 'area',
+//                                renderTo: 'container',
+//                                events: {
+//                                    load: function(event) {
+//                                        this.series[0].update({
+//                                            type: 'areaspline'
+//                                        });
+//                                    }
+//                                },
                                 backgroundColor: {
                                     linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
                                     stops: [
@@ -46,7 +92,7 @@
                                     textTransform: 'uppercase',
                                     fontSize: '20px'
                                 },
-                                text: response.results['cityName']
+                                text: response.results['cityName'] + ": " + response.results['indicatorName']
                             },
                             subtitle: {
                                 style: {
@@ -70,6 +116,19 @@
                                     }
                                 },
                                 categories:[
+                                        1996,
+                                        1997,
+                                        1998,
+                                        1999,
+                                        2000,
+                                        2001,
+                                        2002,
+                                        2003,
+                                        2004,
+                                        2005,
+                                        2006,
+                                        2007,
+                                        2008,
                                         2009,
                                         2010,
                                         2011,
@@ -83,6 +142,7 @@
                                     style: {
                                         color: '#E0E0E3'
                                     }
+//                                    formatter: function() { return this.value; }
                                 },
                                 lineColor: '#707073',
                                 minorGridLineColor: '#505053',
@@ -100,6 +160,10 @@
                                 style: {
                                     color: '#F0F0F0'
                                 }
+//                                formatter: function() {
+//                                    return '<b>'+ this.series.name +'</b><br/>'+
+//                                            this.x +': '+ this.y;
+//                                }
                             },
                             plotOptions: {
                                 series: {
@@ -108,7 +172,8 @@
                                     },
                                     marker: {
                                         lineColor: '#333'
-                                    }
+                                    },
+                                    area: { fillOpacity: 0.5 }
                                 },
                                 boxplot: {
                                     fillColor: '#505053'
@@ -130,6 +195,7 @@
                                 itemHiddenStyle: {
                                     color: '#606063'
                                 }
+                               // layout: 'vertical', align: 'left', verticalAlign: 'top', x: 150, y: 100, floating: true, borderWidth: 1
                             },
                             credits: {
                                 style: {
@@ -228,17 +294,24 @@
                                 //change indicator
                                 name: response.results['indicatorName'],
                                 //change indicator detail
-                                data: [y1, y2, y3, y4, y5]
+                                data: [y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11, y12, y13, y14, y14, y16, y17, y18],
+                                //threshold: null
                             }]
                         }
                 );
             })
         }
+
+        $(document).ready(function(){
+            $('#highcharts-0').click();
+        });
+
     </script>
 </head>
-<body onload="getResult()">
+<body style="background-color: black" onload="getResult()">
 <script language="JavaScript" src="/js/chart/highcharts.js"></script>
 <script language="JavaScript" src="/js/chart/exporting.js"></script>
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<!--<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
+<div id="container" style="height: 537px; margin: 0px auto"></div>
 </body>
 </html>

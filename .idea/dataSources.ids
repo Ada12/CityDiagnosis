@@ -328,6 +328,30 @@
       <column name="y2015" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PK_indexdetail" columns="No"/>
     </table>
+    <table name="indicator_detail" schema="dbo" catalog="CityDiagnosis" type="TABLE">
+      <column name="id" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="city_id" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="indicator_id" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2013" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2012" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2011" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2010" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2009" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2008" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2007" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2006" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2005" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2004" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2003" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2002" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2001" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y2000" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y1999" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y1998" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y1997" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="y1996" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PK__indicato__3213E83F1FCDBCEB" columns="id"/>
+    </table>
     <table name="sysdiagrams" schema="dbo" catalog="CityDiagnosis" type="TABLE">
       <column name="name" sqlType="sysname" precision="128" scale="0" nullable="false" jdbcType="12"/>
       <column name="principal_id" sqlType="int" precision="10" scale="0" nullable="false" jdbcType="4"/>
