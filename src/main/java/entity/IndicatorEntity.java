@@ -3,33 +3,33 @@ package entity;
 import javax.persistence.*;
 
 /**
- * Created by yangchen on 16-1-3.
+ * Created by yangchen on 16-1-7.
  */
 @Entity
 @Table(name = "Indicator", schema = "dbo", catalog = "CityDiagnosis")
 public class IndicatorEntity {
-    private String indexId;
-    private String indexName;
+    private String indicatorId;
+    private String indicatorName;
     private String unit;
 
     @Id
-    @Column(name = "index_id")
-    public String getIndexId() {
-        return indexId;
+    @Column(name = "indicator_id")
+    public String getIndicatorId() {
+        return indicatorId;
     }
 
-    public void setIndexId(String indexId) {
-        this.indexId = indexId;
+    public void setIndicatorId(String indicatorId) {
+        this.indicatorId = indicatorId;
     }
 
     @Basic
-    @Column(name = "index_name")
-    public String getIndexName() {
-        return indexName;
+    @Column(name = "indicator_name")
+    public String getIndicatorName() {
+        return indicatorName;
     }
 
-    public void setIndexName(String indexName) {
-        this.indexName = indexName;
+    public void setIndicatorName(String indicatorName) {
+        this.indicatorName = indicatorName;
     }
 
     @Basic
@@ -49,8 +49,9 @@ public class IndicatorEntity {
 
         IndicatorEntity that = (IndicatorEntity) o;
 
-        if (indexId != null ? !indexId.equals(that.indexId) : that.indexId != null) return false;
-        if (indexName != null ? !indexName.equals(that.indexName) : that.indexName != null) return false;
+        if (indicatorId != null ? !indicatorId.equals(that.indicatorId) : that.indicatorId != null) return false;
+        if (indicatorName != null ? !indicatorName.equals(that.indicatorName) : that.indicatorName != null)
+            return false;
         if (unit != null ? !unit.equals(that.unit) : that.unit != null) return false;
 
         return true;
@@ -58,8 +59,8 @@ public class IndicatorEntity {
 
     @Override
     public int hashCode() {
-        int result = indexId != null ? indexId.hashCode() : 0;
-        result = 31 * result + (indexName != null ? indexName.hashCode() : 0);
+        int result = indicatorId != null ? indicatorId.hashCode() : 0;
+        result = 31 * result + (indicatorName != null ? indicatorName.hashCode() : 0);
         result = 31 * result + (unit != null ? unit.hashCode() : 0);
         return result;
     }

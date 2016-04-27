@@ -19,28 +19,6 @@
             var content = url.split('/');
             var urlSend = "/json/" + content[3] + "/" + content[4];
             $.get(urlSend, {Action:"get",Name:"yc"}, function (response, textStatus){
-//                var y1 = response.results["y1996"] == null? null : parseFloat(response.results["y1996"]);
-//                var y2 = response.results["y1997"] == null? null : parseFloat(response.results["y1997"]);
-//                var y3 = response.results["y1998"] == null? null : parseFloat(response.results["y1998"]);
-//                var y4 = response.results["y1999"] == null? null : parseFloat(response.results["y1999"]);
-//                var y5 = response.results["y2000"] == null? null : parseFloat(response.results["y2000"]);
-//                var y6 = response.results["y2001"] == null? null : parseFloat(response.results["y2001"]);
-//                var y7 = response.results["y2002"] == null? null : parseFloat(response.results["y2002"]);
-//                var y8 = response.results["y2003"] == null? null : parseFloat(response.results["y2003"]);
-//                var y9 = response.results["y2004"] == null? null : parseFloat(response.results["y2004"]);
-//                var y10 = response.results["y2005"] == null? null : parseFloat(response.results["y2005"]);
-//                var y11 = response.results["y2006"] == null? null : parseFloat(response.results["y2006"]);
-//                var y12 = response.results["y2007"] == null? null : parseFloat(response.results["y2007"]);
-//                var y13 = response.results["y2008"] == null? null : parseFloat(response.results["y2008"]);
-//                var y14 = response.results["y2009"] == null? null : parseFloat(response.results["y2009"]);
-//                var y15 = response.results["y2010"] == null? null : parseFloat(response.results["y2010"]);
-//                var y16 = response.results["y2011"] == null? null : parseFloat(response.results["y2011"]);
-//                var y17 = response.results["y2012"] == null? null : parseFloat(response.results["y2012"]);
-//                var y18 = response.results["y2013"] == null? null : parseFloat(response.results["y2013"]);
-
-
-                var y1 = response.results["y1996"] == ""? null : parseFloat(response.results["y1996"]);
-                var y2 = response.results["y1997"] == ""? null : parseFloat(response.results["y1997"]);
                 var y3 = response.results["y1998"] == ""? null : parseFloat(response.results["y1998"]);
                 var y4 = response.results["y1999"] == ""? null : parseFloat(response.results["y1999"]);
                 var y5 = response.results["y2000"] == ""? null : parseFloat(response.results["y2000"]);
@@ -116,8 +94,6 @@
                                     }
                                 },
                                 categories:[
-                                        1996,
-                                        1997,
                                         1998,
                                         1999,
                                         2000,
@@ -294,7 +270,7 @@
                                 //change indicator
                                 name: response.results['indicatorName'],
                                 //change indicator detail
-                                data: [y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11, y12, y13, y14, y14, y16, y17, y18],
+                                data: [y3, y4, y5, y6, y7, y8, y9, y10, y11, y12, y13, y14, y14, y16, y17, y18]
                                 //threshold: null
                             }]
                         }

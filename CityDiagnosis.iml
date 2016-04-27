@@ -20,7 +20,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="EclipseLink" />
         <datasource-mapping>
-          <factory-entry name="CityDiagnosis" value="13cf3325-562f-48ac-a56b-f19f646d9ea7" />
+          <factory-entry name="CityDiagnosis" value="bceab11b-38e2-436a-9482-8a5fe4c25653" />
           <factory-entry name="NewPersistenceUnit" />
           <factory-entry name="noname-a.xml@0" value="13cf3325-562f-48ac-a56b-f19f646d9ea7" />
         </datasource-mapping>
