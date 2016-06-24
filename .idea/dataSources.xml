@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1960080737">
+  <component name="DataSourceManagerImpl" format="xml" hash="889507671">
     <data-source source="LOCAL" name="CityDiagnosis/EclipseLink" uuid="bceab11b-38e2-436a-9482-8a5fe4c25653">
       <driver-ref>sqlserver.jtds</driver-ref>
       <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
