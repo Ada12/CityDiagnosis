@@ -16,6 +16,7 @@
     <mvc:resources mapping="/js/**" location="/js/"/>
     <mvc:resources mapping="/" location="/"/>
 
+
     <context:component-scan base-package="controller" />
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

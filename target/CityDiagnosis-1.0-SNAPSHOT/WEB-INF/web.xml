@@ -19,4 +19,19 @@
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>cors</filter-name>
+        <!--<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>-->
+        <filter-class>controller.CorsFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>cors</filter-name>
+        <url-pattern>/json/annal/{indicatorId}</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>cors</filter-name>
+        <url-pattern>/json/taxi/{timePoint}</url-pattern>
+    </filter-mapping>
 </web-app>

@@ -341,6 +341,14 @@
       <primary-key name="PK__sysdiagr__C2B05B6100551192" columns="diagram_id"/>
       <index name="UK_principal_name" unique="true" columns="principal_id,name"/>
     </table>
+    <table name="taxi_position" schema="dbo" catalog="CityDiagnosis" type="TABLE">
+      <column name="id" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="time" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="lng" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="lat" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="count" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PK__taxi_pos__3213E83F33D4B598" columns="id"/>
+    </table>
     <table name="all_columns" schema="sys" catalog="CityDiagnosis" type="VIEW">
       <column name="object_id" sqlType="int" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="sysname" precision="128" scale="0" nullable="true" jdbcType="12"/>

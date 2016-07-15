@@ -7,6 +7,7 @@
         <class>entity.IndicatorEntity</class>
         <class>entity.IndicatorDetailEntity</class>
         <class>entity.CityPosEntity</class>
+        <class>entity.TaxiPositionEntity</class>
         <properties>
             <property name="eclipselink.jdbc.url" value="jdbc:jtds:sqlserver://10.10.240.120:1433/CityDiagnosis"/>
             <property name="eclipselink.jdbc.driver" value="net.sourceforge.jtds.jdbc.Driver"/>
