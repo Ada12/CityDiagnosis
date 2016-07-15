@@ -9,7 +9,7 @@
 	setInterval("refresh()",10000);
 	//用ajax取到json数据并得到数组。
 	function refresh(){
-		var url = "http://localhost:8081/json/taxi";
+		var url = "/json/taxi";
 		$.ajax({ 
 			  type: "get", 
 			  url: url,

@@ -12,12 +12,10 @@ public class CorsFilter implements Filter {
 
     private static final Logger log = Logger.getAnonymousLogger();
 
-    @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
     }
 
-    @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         log.info("Adding Access Control Response Headers");
         HttpServletResponse response = (HttpServletResponse) servletResponse;
@@ -28,7 +26,6 @@ public class CorsFilter implements Filter {
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
-    @Override
     public void destroy() {
 
     }

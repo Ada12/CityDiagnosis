@@ -21,7 +21,7 @@
 	//从URL取id值，作为指标值
 	//var id = GetQueryString(id);
 	var id = 1;
-	var url = "http://localhost:8080/json/annal/"+id;
+	var url = "/json/annal/"+id;
 	var dataSource=[];
 	var yearV = 1998;
 	var maxYear = 2013;

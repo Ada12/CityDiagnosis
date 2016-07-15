@@ -26,5 +26,8 @@
         <module name="CityDiagnosis" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CityDiagnosis" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
